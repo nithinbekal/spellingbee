@@ -4,5 +4,25 @@ words present in a source file that acts as the dictionary. The alternate
 spelling suggestions are based on the frequency with which the words occur 
 in the source file.
 
+Usage
+-----
+
+You can create a spelling bee and call the correct 
+
+  s = SpellingBee.new
+  s.correct "speling" #=> "spelling"
+
+Credits
+-------
+
 This gem is based on the Python example in Peter Norvig's article "How to write
 a spelling corrector". [http://norvig.com/spell-correct.html] 
+
+Brian Adkins wrote a version of this code in ruby and the logic used within the
+SpellingBee class is based on that code. 
+[http://lojic.com/blog/2008/09/04/how-to-write-a-spelling-corrector-in-ruby/]
+
+License
+-------
+
+Copyright (c) 2010 Nithin Bekal, released under the MIT license
