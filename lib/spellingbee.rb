@@ -12,7 +12,7 @@ class SpellingBee
   end
     
   # Returns all the combinations of the word with one character removed
-  #
+  # 
   # Example:
   #   deletions("word") #=> ["ord", "wrd", "wod", "wor"]
   #
