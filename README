@@ -1,0 +1,8 @@
+
+Spellingbee is a ruby gem that gives you spelling suggestions based on the
+words present in a source file that acts as the dictionary. The alternate 
+spelling suggestions are based on the frequency with which the words occur 
+in the source file.
+
+This gem is based on the Python example in Peter Norvig's article "How to write
+a spelling corrector". [http://norvig.com/spell-correct.html] 

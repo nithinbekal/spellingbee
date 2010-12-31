@@ -1,0 +1,2 @@
+This file contains data used for testing. Let's put some words here that we 
+could test with. This file is loaded by default if no other file is specified.
