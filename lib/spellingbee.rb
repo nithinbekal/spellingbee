@@ -62,7 +62,7 @@ class SpellingBee
   # distance is the number of edits it takes to obtain the second word from 
   # the first.)
   def variation_words word
-    deletions(word) + transpositions(word) + replacements(word) + insertions(word)
+    ( deletions(word) + transpositions(word) + replacements(word) + insertions(word) ).uniq
   end
   
   # Selects the words from the list that are present in the dictionary.

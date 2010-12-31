@@ -7,7 +7,9 @@ in the source file.
 Usage
 -----
 
-You can create a spelling bee and call the correct 
+Install the gem by using gem install spellingbee.
+
+You can create a new spelling bee and call the correct method for a word.
 
   s = SpellingBee.new
   s.correct "speling" #=> "spelling"
