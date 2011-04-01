@@ -12,14 +12,14 @@ Install the gem by using gem install spellingbee.
 You can create a new spelling bee and call the correct method for a word. This
 will return an array of suggestions.
 
-  s = SpellingBee.new
-  s.correct "speling" #=> ["spelling"]
+    s = SpellingBee.new
+    s.correct "speling" #=> ["spelling"]
 
 The above example uses spellingbee's default dictionary text, which contains 
 just a few words. To use your own text source:
 
-  s = SpellingBee.new :source_text => 'my_file.txt'
-  s.correct "speling" #=> ["spelling"]
+    s = SpellingBee.new :source_text => 'my_file.txt'
+    s.correct "speling" #=> ["spelling"]
   
 The source can be any text file that contains all the words that you might expect 
 the spelling corrector to be able to correct.
