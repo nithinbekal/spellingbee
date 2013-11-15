@@ -1,13 +1,9 @@
 class SpellingBee
-  attr_accessor :dict_words, :dict_frequency
-
   DEFAULT_DICT = File.join(File.dirname(__FILE__), '..', '..', 'dict', 'default.txt')
 
   def initialize(opts = {})
-    options = { source_text: DEFAULT_DICT }.merge opts
-    @dict_frequency = Hash.new(1)
-    @dict_words = File.new(options[:source_text]).read.downcase.scan(/[a-z]+/)
-    @dict_words.each { |word| @dict_frequency[word] += 1 }
+    @options = { source_text: DEFAULT_DICT }.merge(opts)
+    load_dictionary
   end
 
   # Returns the suggestion for the correction. If the word is found in the
@@ -31,7 +27,13 @@ class SpellingBee
   # Example: known(["asdfgh", "known", "word", "qqqq"]) #=> ["known", "word"]
   #
   def known(words)
-    known_words = words.find_all { |w| @dict_frequency.has_key? w }
+    known_words = words.find_all { |w| @dict_frequency.has_key?(w) }
     known_words.empty? ? nil : known_words
+  end
+
+  def load_dictionary
+    @dict_frequency = Hash.new(1)
+    words = File.new(@options[:source_text]).read.downcase.scan(/[a-z]+/)
+    words.each { |word| @dict_frequency[word] += 1 }
   end
 end
