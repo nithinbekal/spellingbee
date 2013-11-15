@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://rubygems.org/gems/spellingbee'
   s.summary     = 'A spelling correction tool for ruby'
   s.description = 'Suggests corrections for mis-spelled words'
+  s.license     = 'MIT'
 
   s.rubyforge_project = 'spellingbee'
 
